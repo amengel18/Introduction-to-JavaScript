@@ -1,25 +1,38 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-var votingAge = 18 
+let votingAge = 18 
 
-if (votingAge > 18) {console.log("true")} 
+if (votingAge => 18) {
+    console.log(true)
+} else {
+    console.log('Not old enough')
+} 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-var name = "Anthony"  
+let a = 1
+let b = 2
 
-var name = "Tony"
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+Number("1999")
+console.log(Number)
 
 
 
 //Task d: Write a function to multiply a*b 
 
+let a = 2
+let b = 4
 
+function mulTwoNums (a, b) {
+    return a * b;
+  }
+  
+console.log(mulTwoNums(2,4))
+  
 
 
 
@@ -27,7 +40,10 @@ var name = "Tony"
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
+let num1 = 32
+function mulTwoNums (a,b) {
+  return (num1 * 7)
+}
 
 
 
@@ -49,9 +65,28 @@ var name = "Tony"
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
+function hoMuchFood(){
+    let weight = prompt("How many pounds does your dog weigh?");
+    let age = prompt("How old is your dog? Whole number if over 1 year. If puppy round to nearest quarter year, .25 for 3 months, .5 for six months, .75 for 9 months.");
+}
 
+if (weight <= 5 && age >= 1){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.05 + 'pounds of food every day!')
+} else if (weight <= 10 && age >= 1){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.04 + 'pounds of food every day!')
+} else if(weight <= 15 && age >= 1){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.03 + 'pounds of food every day!')
+} else if (weight >= 15 && age >= 1){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.02 + 'pounds of food every day!')
+} else if (weight >= 5 && age <= .25){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.10 + 'pounds of food every day!')
+} else if (weight >= 5 && age <= .5){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.05 + 'pounds of food every day!')
+} else if (weight >= 5 && age <= .75){
+    console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.04 + 'pounds of food every day!')
+}
 
-
+console.log(howMuchFood())  
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -67,14 +102,19 @@ var name = "Tony"
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function KmToMiles(kn){
+    return km * 1.609;
+}
 
-
-
+console.log(KmToMiles(2))
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+function feetToCm(ft){
+    return ft * 30.48;
+}
 
-
+console.log(feetToCm(2))
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -83,7 +123,11 @@ var name = "Tony"
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-
+function annoyingSong(bottles) {
+    for (let i = bottles; i > 0; i--){
+        console.log(`${i} of soda on the wall, ${i} of soda! Take one down, pass it around. ${i - 1} bottles of soda on the wall!`)
+    }
+}
 
 
 /************************************************************** Task 7 **************************************************************/
