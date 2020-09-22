@@ -95,6 +95,46 @@ console.log(howMuchFood())
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+const rock = 0
+const paper = 1
+const scissors = 2
+
+let player1 = Math.floor(Math.random() * 3)
+let player2 = Math.floor(Math.random() * 3)
+
+if (player1 === 0){
+    return 'rock';
+} else if (player1 === 1){
+    return 'paper';
+} else if (player1 === 2){
+    return 'scissors';
+}
+
+if (player2 === 0){
+    return 'rock';
+} else if (player2 === 1){
+    return 'paper';
+} else if (player2 === 2){
+    return 'scissors';
+}
+
+if (player1 === player2){
+    return 'Tie';
+} else if (player1 === 0 && player2 === 1){
+    return 'Paper wins';
+} else if (player1 === 0 && player2 === 2){
+    return 'Rock wins';
+} else if (player1 === 1 && player2 === 0){
+    return 'Paper wins';
+} else if (player1 === 1 && player2 === 2){
+    return 'Scissors wins';
+} else if (player1 === 2 && player2 === 0){
+    return 'Rock wins';
+} else if (player1 === 2 && player2 === 1){
+    return 'Scissors wins';
+}
+
+console.log(player1,player2)
   
   
 
@@ -138,7 +178,8 @@ function annoyingSong(bottles) {
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+
+
 
   
   
