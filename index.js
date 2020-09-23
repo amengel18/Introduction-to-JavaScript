@@ -12,13 +12,16 @@ if (votingAge => 18) {
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
 let a = 1
-let b = 2
+let b = 1
 
+if (a === b){
+    b = 2
+}
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-Number("1999")
-console.log(Number)
+let num = Number("1999")
+console.log(num)
 
 
 
@@ -41,8 +44,8 @@ console.log(mulTwoNums(2,4))
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
 let num1 = 32
-function mulTwoNums (a,b) {
-  return (num1 * 7)
+function mulTwoNums (a) {
+  return (a * 7)
 }
 
 
