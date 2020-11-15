@@ -27,11 +27,11 @@ console.log(num)
 
 //Task d: Write a function to multiply a*b 
 
-let a = 2
-let b = 4
+let c = 2
+let d = 4
 
-function mulTwoNums (a, b) {
-    return a * b;
+function mulTwoNums (c, d) {
+    return c * d;
   }
   
 console.log(mulTwoNums(2,4))
@@ -67,11 +67,14 @@ function mulTwoNums (a) {
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
-function hoMuchFood(){
-    let weight = prompt("How many pounds does your dog weigh?");
+
+let weight = prompt("How many pounds does your dog weigh?");
     let age = prompt("How old is your dog? Whole number if over 1 year. If puppy round to nearest quarter year, .25 for 3 months, .5 for six months, .75 for 9 months.");
-}
+
+
+
+function howMuchFood() {
+    
 
 if (weight <= 5 && age >= 1){
     console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.05 + 'pounds of food every day!')
@@ -88,9 +91,9 @@ if (weight <= 5 && age >= 1){
 } else if (weight >= 5 && age <= .75){
     console.log('Your dog weighs' + weight + 'pounds!' + 'Dog should eat' + weight*.04 + 'pounds of food every day!')
 }
-
-console.log(howMuchFood())  
-
+}
+  
+console.log(howMuchFood())
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
@@ -102,50 +105,61 @@ const rock = 0
 const paper = 1
 const scissors = 2
 
-let player1 = Math.floor(Math.random() * 3)
-let player2 = Math.floor(Math.random() * 3)
+const player1 = prompt("rock, paper, scissors")
+const computer = Math.floor(Math.random() * 3)
 
-if (player1 === 0){
+function game(player1, computer){
+    //player1 = prompt("rock, paper, scissors");
+    //computer = Math.floor(Math.random() * 3)
+
+
+
+//if (player1 === 0){
+  //  return 'rock';
+//} else if (player1 === 1){
+  //  return 'paper';
+//} else if (player1 === 2){
+  //  return 'scissors';
+//}
+
+if (computer === 0){
     return 'rock';
-} else if (player1 === 1){
+} else if (computer === 1){
     return 'paper';
-} else if (player1 === 2){
+} else if (computer === 2){
     return 'scissors';
 }
-
-if (player2 === 0){
-    return 'rock';
-} else if (player2 === 1){
-    return 'paper';
-} else if (player2 === 2){
-    return 'scissors';
 }
 
-if (player1 === player2){
+console.log(game(player1, computer))
+
+function playGame(game){
+
+if (player1 === computer){
     return 'Tie';
-} else if (player1 === 0 && player2 === 1){
+} else if (player1 === 0 && computer === 1){
     return 'Paper wins';
-} else if (player1 === 0 && player2 === 2){
+} else if (player1 === 0 && computer === 2){
     return 'Rock wins';
-} else if (player1 === 1 && player2 === 0){
+} else if (player1 === 1 && computer === 0){
     return 'Paper wins';
-} else if (player1 === 1 && player2 === 2){
+} else if (player1 === 1 && computer === 2){
     return 'Scissors wins';
-} else if (player1 === 2 && player2 === 0){
+} else if (player1 === 2 && computer === 0){
     return 'Rock wins';
-} else if (player1 === 2 && player2 === 1){
+} else if (player1 === 2 && computer === 1){
     return 'Scissors wins';
 }
+}
 
-console.log(player1,player2)
-  
+console.log(playGame(game(player1, computer)))
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-function KmToMiles(kn){
+function KmToMiles(km){
     return km * 1.609;
 }
 
@@ -166,12 +180,13 @@ console.log(feetToCm(2))
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-function annoyingSong(bottles) {
-    for (let i = bottles; i > 0; i--){
-        console.log(`${i} of soda on the wall, ${i} of soda! Take one down, pass it around. ${i - 1} bottles of soda on the wall!`)
+function annoyingSong(i) {
+    for (let i = 15; i > 0; i--){
+        return `${i} of soda on the wall, ${i} of soda! Take one down, pass it around. ${i - 1} bottles of soda on the wall!`
     }
 }
 
+console.log(annoyingSong(15))
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
