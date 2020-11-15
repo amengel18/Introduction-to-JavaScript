@@ -109,8 +109,7 @@ const player1 = prompt("rock, paper, scissors")
 const computer = Math.floor(Math.random() * 3)
 
 function game(player1, computer){
-    //player1 = prompt("rock, paper, scissors");
-    //computer = Math.floor(Math.random() * 3)
+   
 
 
 
