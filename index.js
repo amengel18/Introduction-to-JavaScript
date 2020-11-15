@@ -111,8 +111,6 @@ const computer = Math.floor(Math.random() * 3)
 function game(player1, computer){
    
 
-
-
 //if (player1 === 0){
   //  return 'rock';
 //} else if (player1 === 1){
@@ -179,13 +177,13 @@ console.log(feetToCm(2))
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-function annoyingSong(i) {
+function annoyingSong() {
     for (let i = 15; i > 0; i--){
         return `${i} of soda on the wall, ${i} of soda! Take one down, pass it around. ${i - 1} bottles of soda on the wall!`
     }
 }
 
-console.log(annoyingSong(15))
+console.log(annoyingSong())
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
